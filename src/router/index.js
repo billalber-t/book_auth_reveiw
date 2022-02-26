@@ -9,6 +9,23 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    children:[
+      {
+        path:"",
+        name:"Books",
+        componentcomponent: () => import("../components/Books.vue"),
+      },
+      {
+        path:"/authors",
+        name:"Authors",
+        componentcomponent: () => import("../components/Authors.vue"),
+      },
+      {
+        path:"/reviews",
+        name:"Reviews",
+        componentcomponent: () => import("../components/Reviews.vue"),
+      },
+    ]
   },
   {
     path: "/about",
