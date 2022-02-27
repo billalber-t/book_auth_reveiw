@@ -12,7 +12,18 @@
                 color="primary white--text"
 
             >
-            Joy Joy
+            <v-list>
+                
+            <v-list-item-group  >
+                <v-list-item  v-for="(item, i) in items" :key="i" :to="item.link"  >
+                    <v-list-item-icon>
+                        <v-icon class="white--text">{{ item.icon }}</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content class="white--text">{{ item.text }}</v-list-item-content>
+                 </v-list-item>
+            </v-list-item-group>
+                
+            </v-list>   
                 
             </v-navigation-drawer>
        
@@ -26,6 +37,11 @@ export default {
     data(){
         return{
             drawer:false,
+            items :[
+                {text:'Books', link:'/', icon:'mdi-home'},
+                {text:'Authors', link:'/authors', icon:'mdi-book'},
+                {text:'Reviews', link:'/reviews', icon:'mdi-home'},
+            ]
         }
     },
 }

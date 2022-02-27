@@ -13,17 +13,17 @@ const routes = [
       {
         path:"",
         name:"Books",
-        componentcomponent: () => import("../components/Books.vue"),
+        component: () => import("../components/Books.vue"),
       },
       {
         path:"/authors",
         name:"Authors",
-        componentcomponent: () => import("../components/Authors.vue"),
+        component: () => import("../components/Authors.vue"),
       },
       {
         path:"/reviews",
         name:"Reviews",
-        componentcomponent: () => import("../components/Reviews.vue"),
+        component: () => import("../components/Reviews.vue"),
       },
     ]
   },
